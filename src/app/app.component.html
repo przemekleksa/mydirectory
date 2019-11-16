@@ -8,5 +8,5 @@
   </nav>
 </header>
 <section id="main">
-  <app-home>NG DIRECTIVE</app-home>
+  <app-home [being]="being" (onYell)="yell($event)">NG DIRECTIVE</app-home>
 </section>

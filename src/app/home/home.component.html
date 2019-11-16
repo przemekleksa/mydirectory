@@ -1,5 +1,30 @@
 <p>
-  home works!
+  {{homeTitle}}
+</p>
+<p>
+  <ng-content></ng-content>
 </p>
 
-<ng-content></ng-content>
+
+<!--- property binding-->
+<input [value] = "myString" />
+<input [required] = "myBoolean" />
+<input value = "{{myString}}" />
+<input required = "{{myBoolean}}" />
+<button (click)="alertMe('I like burgers')">mybutton</button>
+
+<!--- 2way data binding-->
+<p>
+  <label>Name:</label>
+  <input [(ngModel)]="character.name" />
+  <label>Belt:</label>
+  <input [(ngModel)]="character.belt" />
+</p>
+<p>{{character.name}}</p>
+<p>{{character.belt}}</p>
+
+<!--- Input-->
+<p>{{being.name}}</p>
+<p>{{being.belt}}</p>
+
+<button (click)="fireYellEvent($event)">YELL</button>
