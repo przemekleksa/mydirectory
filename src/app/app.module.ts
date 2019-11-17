@@ -6,6 +6,10 @@ import { RouterModule, Routes } from '@angular/router'; // This is what we need 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DirectoryComponent } from './directory/directory.component';
+import { FilterPipe } from './filter.pipe';
+import { LoggingService } from './logging.service';
+import { DataService } from './data.service';
+import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes = [
   { path: 'directory/:ninja', component: DirectoryComponent},
@@ -17,17 +21,19 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    DirectoryComponent
+    DirectoryComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot(appRoutes) // Add here array with paths and components
   ],
   exports: [
 
   ],
-  providers: [],
+  providers: [LoggingService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
