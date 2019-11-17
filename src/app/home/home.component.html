@@ -4,27 +4,28 @@
 <p>
   <ng-content></ng-content>
 </p>
-
+<button (click)="fireYellEvent($event)">YELL</button>
+<p>pear</p>
 
 <!--- property binding-->
-<input [value] = "myString" />
+<!-- <input [value] = "myString" />
 <input [required] = "myBoolean" />
 <input value = "{{myString}}" />
 <input required = "{{myBoolean}}" />
-<button (click)="alertMe('I like burgers')">mybutton</button>
+<button (click)="alertMe('I like burgers')">mybutton</button> -->
 
 <!--- 2way data binding-->
-<p>
+<!-- <p>
   <label>Name:</label>
   <input [(ngModel)]="character.name" />
   <label>Belt:</label>
   <input [(ngModel)]="character.belt" />
 </p>
 <p>{{character.name}}</p>
-<p>{{character.belt}}</p>
+<p>{{character.belt}}</p> -->
 
 <!--- Input-->
-<p>{{being.name}}</p>
+<!-- <p>{{being.name}}</p>
 <p>{{being.belt}}</p>
 
-<button (click)="fireYellEvent($event)">YELL</button>
+<button (click)="fireYellEvent($event)">YELL</button> -->

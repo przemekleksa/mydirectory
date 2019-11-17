@@ -2,11 +2,12 @@
   <h1>{{title}}</h1>
   <nav>
     <ul>
-      <li>Link</li>
-      <li>Link</li>
+      <li><a [routerLink]="['/']">Home</a></li>
+      <li><a [routerLink]="['/directory']">Directory</a></li>
     </ul>
   </nav>
 </header>
 <section id="main">
-  <app-home [being]="being" (onYell)="yell($event)">NG DIRECTIVE</app-home>
+  <!-- <app-home [being]="being" (onYell)="yell($event)">NG DIRECTIVE</app-home> -->
+  <router-outlet ></router-outlet>
 </section>
