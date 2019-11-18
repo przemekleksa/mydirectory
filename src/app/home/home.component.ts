@@ -9,8 +9,7 @@ import { LoggingService } from 'app/logging.service';
 export class HomeComponent implements OnInit {
   homeTitle = "Welcome to the homepage..."
 
-  constructor(private logger: LoggingService) { 
-    
+  constructor(private logger: LoggingService) {   
   }
 
   logIt(){

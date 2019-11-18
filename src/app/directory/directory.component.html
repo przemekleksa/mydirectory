@@ -5,16 +5,22 @@
   <label>Filter ninjas by name:</label>
   <input type="text" name="searchTerm" [(ngModel)]="term" />
 </form>
-<ul id="ninja-lisitng">
+<ul id="ninja-listing">
   <li *ngFor="let ninja of ninjas | filter:term">
     <div class="single-ninja">
       <!--belt color-->
-      <span [ngStyle]="{background: ninja.belt}">{{ninja.belt}} belt</span>
+      <span [ngStyle]="{background: ninja.belt}">{{ninja.belt}} belt 
+      </span>
       <!--ninja name-->
       <h3>{{ninja.name}}</h3>
-      <!-- <div (click)="remove($event)" [attr.data-name]="ninja.name">delete</div> -->
     </div>
   </li>
 </ul>
-
-<button (click)="logIt()">Log me</button>
+<form id="add-ninja">
+  <label>Name</label>
+  <input type="text" name="name" [(ngModel)] = "name"/>
+  <label>Color</label>
+  <input type="text" name="belt" [(ngModel)] = "belt"/>
+  
+  <button (click) = "fbPostData(name, belt)">Add Ninja</button>
+</form>

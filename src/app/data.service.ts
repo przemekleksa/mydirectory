@@ -5,9 +5,10 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataService {
 
+  //connecting to firebase
   constructor(private http: Http) { }
   fetchData() {
-    return this.http.get('./assets/ninjas.json').map(
+    return this.http.get('https://nn-angular-przemek.firebaseio.com/.json').map(
       (res) => res.json()
     )
   }

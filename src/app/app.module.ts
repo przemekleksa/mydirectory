@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router'; // This is what we need for routing
+import { RouterModule, Routes } from '@angular/router'; // This is what I need for routing
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -10,6 +10,7 @@ import { FilterPipe } from './filter.pipe';
 import { LoggingService } from './logging.service';
 import { DataService } from './data.service';
 import { HttpModule } from '@angular/http';
+
 
 const appRoutes: Routes = [
   { path: 'directory/:ninja', component: DirectoryComponent},
